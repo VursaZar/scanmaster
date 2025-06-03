@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  margin-top: 8px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 0;
+}
+
+.product-card {
+  background: #111;
+  padding: 12px; 
+  border-radius: 14px; 
+  color: white;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #F96000;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card .image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #F96000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0 4px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+}
+
+.price {
+  color: #F96000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.buy-button {
+  margin-top: 12px;
+  background-color: #F96000;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  padding: 14px 0;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #e55600;
+}
+
+.product-card.add-card {
+  border: 2px dashed #F96000;
+  background-color: #0f0f0f;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #F96000;
+  cursor: pointer;
+}
+
+.product-card.add-card .plus-icon {
+  font-size: 96px; 
+  font-weight: bold;
+  padding: 40px 0;
+  line-height: 1;
+  color: white; 
+}
+
+.buy-section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.buy-controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.buy-controls .buy-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 22px;
+  border-radius: 14px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  font-weight: 700;
+  background: #F96000;
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketplace-buttons {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mp-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mp-btn img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+}
+
+.mp-btn:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2) drop-shadow(0 0 5px #F96000);
+}
+
+.mp-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Цвета + иконки */
+.mp-btn.wb {
+  background-color: #A100FF;
+  background-image: url('/assets/icons/wb.svg');
+}
+
+.mp-btn.ozon {
+  background-color: #007BFF;
+  background-image: url('/assets/icons/ozon.svg');
+}
+
+.mp-btn.ym {
+  background-color: #FFCC00;
+  background-image: url('/assets/icons/yamarket.svg');
+}
+
+.feature-remove {
+  background: #D00000;
+  color: rgb(253, 138, 7);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feature-remove:hover {
+  background: #a00000;
+}
+
+.filters {
+  background: #111;
+  color: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px; /* Прилипающая панель */
+  height: fit-content;
+}
+
+.filters input[type="text"] {
+  padding: 10px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.filters h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #F96000;
+}
+
+.filters label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.filters input[type="checkbox"] {
+  accent-color: #F96000;
+  width: 16px;
+  height: 16px;
+}
+
+.catalog-wrapper {
+  display: flex;
+  margin-top: 68px;
+  padding: 0 40px;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.catalog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.quantity-controls .decrease,
+.quantity-controls .increase {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #F96000;
+  background: none;
+  color: #F96000;
+  font-size: 18px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  padding: 0;
+}
+
+.quantity-controls .decrease:hover,
+.quantity-controls .increase:hover {
+  background: #F96000;
+  color: #fff;
+}
+
+.quantity-controls .quantity-input {
+  width: 32px;
+  background: #181818;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  text-align: center;
+  padding: 2px 0;
+  margin: 0 2px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.quantity-controls .quantity-input:focus, .quantity-controls .quantity-input:hover {
+  border: 2px solid #F96000;
+  box-shadow: 0 0 0 2px #F9600033;
+}
+.quantity-controls .quantity-input::-webkit-outer-spin-button,
+.quantity-controls .quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity-controls .quantity-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
