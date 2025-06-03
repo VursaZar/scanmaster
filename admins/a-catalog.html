@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — SCANMASTER</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/catalog.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/a-pruduct.css">
+
+  <!-- Firebase init -->
+  <script type="module" src="/js/firebase-init.js"></script>
+  <script type="module" src="/js/check-admin-access.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="catalog-wrapper">
+    <aside class="filters">
+      <input type="text" id="searchInput" placeholder="Поиск по названию" />
+    
+      <h3>Категория</h3>
+      <label><input type="checkbox" name="category" value="Сканеры"> Сканеры</label>
+      <label><input type="checkbox" name="category" value="Принтеры"> Принтеры</label>
+    
+      <h3>Наличие</h3>
+      <label><input type="checkbox" name="available" value="true"> В наличии</label>
+    
+      <h3>Хит продаж</h3>
+      <label><input type="checkbox" name="bestseller" value="true"> Только хиты</label>
+    
+      <h3>Цвет</h3>
+      <label><input type="checkbox" name="color" value="Чёрный"> Чёрный</label>
+      <label><input type="checkbox" name="color" value="Белый"> Белый</label>
+    
+      <h3>Поддержка кодов</h3>
+      <label><input type="checkbox" name="features" value="ЧЗ"> Честный ЗНАК</label>
+      <label><input type="checkbox" name="features" value="EGAIS"> ЕГАИС</label>
+      <label><input type="checkbox" name="features" value="QR"> QR</label>
+    </aside>
+    
+    <main class="catalog-content">
+      <div class="catalog-grid" id="productGrid"></div>
+    </main>
+  </div>
+
+  <div id="addProductModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Добавить товар</h2>
+      <form id="addProductForm">
+        <input type="text" name="name" placeholder="Название товара" required>
+        <input type="text" name="slug" placeholder="Slug (например: scaner-sor1)" required>
+        <input type="number" name="price" placeholder="Цена" required>
+        <input type="number" name="oldPrice" placeholder="Старая цена">
+        <input type="text" name="category" placeholder="Категория">
+        <input type="text" name="color" placeholder="Цвет">
+        <input type="number" name="priority" placeholder="Приоритет">
+        <input type="number" name="position" placeholder="Позиция">
+        <input type="text" name="shortDescription" placeholder="Краткое описание">
+        <textarea name="descriptionFull" placeholder="Полное описание"></textarea>
+        <input type="text" name="video" placeholder="Ссылка на видео">
+        <input type="text" name="variantGroup" placeholder="Группа вариантов">
+        <input type="text" name="tags" placeholder="Теги через точку с запятой ;">
+        <input type="text" name="driver" placeholder="Ссылка на драйвер">
+        <input type="text" name="manual" placeholder="Ссылка на инструкцию"> 
+        <input type="text" name="towb" placeholder="Ссылка на Wildberries">
+        <input type="text" name="tooz" placeholder="Ссылка на OZON">
+        <input type="text" name="toym" placeholder="Ссылка на Яндекс Маркет">
+
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="available"> Доступен</label>
+          <label><input type="checkbox" name="bestseller"> Хит продаж</label>
+          <label><input type="checkbox" name="hidden"> Скрыт</label>
+        </div>
+
+        <div id="featuresContainer">
+          <h4 style="margin: 10px 0; color: #F96000;">Характеристики</h4>
+        </div>
+        <button id="addFeatureBtn" type="button" class="feature-add-btn">+ Характеристика</button>   
+        
+        <div id="imagesContainer">
+            <h4 style="margin: 10px 0; color: #F96000;">Изображения</h4>
+        </div>
+        <button id="addImageBtn" type="button" class="feature-add-btn">+ Ссылка на изображение</button>          
+
+        <button type="submit">Сохранить</button>
+      </form>
+      <button onclick="closeModal()">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Скрипты — внизу -->
+  <script type="module" src="/js/a-catalog.js"></script>
+  <script type="module" src="/js/a-product.js"></script>
+  <script type="module" src="/js/logout-handler.js"></script>
+  <script>
+    // ❗ Подгрузка хедера — только в самом конце
+    fetch('/partials/admin-header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

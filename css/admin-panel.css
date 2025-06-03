@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.admin-welcome {
+    height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    padding: 0 20px;
+    font-family: 'Days One', sans-serif;
+  }
+  
+  .welcome-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  .welcome-sub {
+    font-size: 20px;
+    margin-bottom: 32px;
+    color: white;
+  }
+  
+  .pulse-title {
+    font-size: 64px;
+    color: #F96000;
+    animation: pulse 1.5s infinite;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.07); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @media (max-width: 600px) {
+    .pulse-title { font-size: 42px; }
+    .welcome-title { font-size: 24px; }
+    .welcome-sub { font-size: 16px; }
+  }
+  
+  .pulse-title {
+    font-size: 64px;
+    color: #F96000;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+      0 0 8px #F96000,
+      0 0 16px #F96000,
+      0 0 24px #F96000,
+      0 0 40px #F96000;
+    animation: pulse-glow 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse-glow {
+    0% {
+      transform: scale(1);
+      text-shadow:
+        0 0 8px #F96000,
+        0 0 16px #F96000,
+        0 0 24px #F96000,
+        0 0 40px #F96000;
+    }
+    50% {
+      transform: scale(1.07);
+      text-shadow:
+        0 0 12px #FF7A1A,
+        0 0 24px #FF7A1A,
+        0 0 36px #FF7A1A,
+        0 0 60px #FF7A1A;
+    }
+    100% {
+      transform: scale(1);
+      text-shadow:
+        0 0 8px #F96000,
+        0 0 16px #F96000,
+        0 0 24px #F96000,
+        0 0 40px #F96000;
+    }
+  }
+  

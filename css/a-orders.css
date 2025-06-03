@@ -1,0 +1,97 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', 'Days One', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.orders-admin {
+  max-width: 900px;
+  margin: 60px auto 0 auto;
+  padding: 0 16px 40px 16px;
+}
+
+.orders-admin h1 {
+  font-size: 32px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  color: #F96000;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+#showArchivedBtn {
+  background: #181818;
+  color: #F96000;
+  border: 2px solid #F96000;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  font-weight: 700;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#showArchivedBtn:hover {
+  background: #F96000;
+  color: #fff;
+}
+
+.order-card {
+  background: #111;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #0002;
+  padding: 22px 24px 18px 24px;
+  margin-bottom: 22px;
+  border: 1.5px solid #333;
+  color: #fff;
+  font-size: 17px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.order-card:hover {
+  box-shadow: 0 4px 16px #F9600033;
+  border-color: #F96000;
+}
+.order-card b {
+  color: #F96000;
+  font-weight: 700;
+}
+.order-card ul {
+  margin: 4px 0 8px 16px;
+  padding-left: 18px;
+  font-size: 16px;
+}
+.order-card li {
+  margin-bottom: 2px;
+}
+.archive-btn {
+  background: #F96000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Days One', 'Inter', sans-serif;
+  font-weight: 700;
+  padding: 7px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.archive-btn:hover {
+  background: #d44d00;
+}
+
+@media (max-width: 700px) {
+  .orders-admin {
+    max-width: 100%;
+    padding: 0 4px 30px 4px;
+  }
+  .order-card {
+    padding: 14px 8px 12px 8px;
+    font-size: 15px;
+  }
+  #showArchivedBtn {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+} 

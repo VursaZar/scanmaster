@@ -1,0 +1,174 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .main-image {
+    width: 360px;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 2px solid #333;
+    background: #111;
+  }  
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .gallery img {
+    width: 72px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #222;
+    transition: border 0.3s ease, transform 0.2s ease;
+  }  
+  
+  .gallery img.active {
+    border-color: #F96000;
+    transform: scale(1.05);
+  }
+  
+  .info-block {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info-block h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: #fff;
+  }
+  
+  .short-desc {
+    font-size: 16px;
+    color: #bbb;
+  }
+  
+  .price-block {
+    display: flex;
+    gap: 16px;
+    font-size: 24px;
+    align-items: baseline;
+  }
+  
+  .price {
+    color: #F96000;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 18px;
+  }
+  
+  .buy-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .market-btn {
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .market-btn:hover {
+    background-color: #F96000;
+  }
+  
+  .specs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  .specs td {
+    border: 1px solid #333;
+    padding: 12px;
+    vertical-align: top;
+  }
+  
+  .specs td:first-child {
+    color: #aaa;
+    width: 160px;
+  }
+  
+  .downloads {
+    margin-top: 16px;
+  }
+  
+  .downloads a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #F96000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .downloads a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    main.product-page {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .main-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .gallery {
+      justify-content: flex-start;
+    }
+  
+    .gallery img {
+      width: 64px;
+      height: 64px;
+      
+    }
+  }
+  

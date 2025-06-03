@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — SCANMASTER</title>
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #111;
+      padding: 40px;
+      border: 1px solid #F96000;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(249, 96, 0, 0.15);
+    }
+    h1 {
+      font-size: 28px;
+      color: #F96000;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #F96000;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    p, li {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Политика конфиденциальности</h1>
+    <p>
+      Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года
+      свободно, своей волей и в своем интересе выражаю свое безусловное согласие на обработку моих персональных данных
+      ИП Мартиросов Г. С. (ОГРНИП 319774600492437, ИНН 772591742027).
+    </p>
+
+    <h2>1. Персональные данные</h2>
+    <p>Согласие дается на обработку одной, нескольких или всех категорий персональных данных, не являющихся специальными или биометрическими, предоставляемых мною, которые могут включать:</p>
+    <ul>
+      <li>Имя;</li>
+      <li>Фамилия;</li>
+      <li>Телефон;</li>
+      <li>Адрес электронной почты (E-mail).</li>
+    </ul>
+
+    <h2>2. Действия оператора</h2>
+    <p>Оператор может совершать следующие действия:</p>
+    <ul>
+      <li>Сбор;</li>
+      <li>Запись;</li>
+      <li>Систематизация;</li>
+      <li>Накопление;</li>
+      <li>Хранение;</li>
+      <li>Уточнение (обновление, изменение);</li>
+      <li>Извлечение;</li>
+      <li>Использование;</li>
+      <li>Блокирование;</li>
+      <li>Удаление;</li>
+      <li>Уничтожение.</li>
+    </ul>
+
+    <h2>3. Способы обработки</h2>
+    <p>Как с использованием средств автоматизации, так и без их использования.</p>
+
+    <h2>4. Цели обработки</h2>
+    <p>Предоставление мне услуг/работ, включая:</p>
+    <ul>
+      <li>Направление уведомлений, касающихся предоставляемых услуг/работ;</li>
+      <li>Подготовка и направление ответов на мои запросы;</li>
+      <li>Информирование о мероприятиях, товарах, услугах, работах Оператора.</li>
+    </ul>
+
+    <h2>5. Передача данных</h2>
+    <p>
+      В связи с тем, что Оператор может осуществлять обработку моих персональных данных посредством программы для ЭВМ
+      «1С-Битрикс24», я даю свое согласие Оператору на осуществление соответствующего поручения ООО «1С-Битрикс»
+      (ОГРН 5077746476209), зарегистрированному по адресу: 109544, г. Москва, б-р Энтузиастов, д. 2, эт.13, пом. 8-19.
+    </p>
+
+    <h2>6. Срок действия согласия</h2>
+    <p>
+      Настоящее согласие действует до момента его отзыва путем направления соответствующего уведомления
+      на электронный адрес <a href="mailto:mgsmedia@ya.ru" style="color:#F96000; text-decoration:none;">mgsmedia@ya.ru</a>.
+    </p>
+
+    <h2>7. Основания для обработки без согласия</h2>
+    <p>
+      В случае отзыва мною согласия на обработку персональных данных Оператор вправе продолжить обработку персональных
+      данных без моего согласия при наличии оснований, предусмотренных Федеральным законом №152-ФЗ «О персональных данных» от 27.07.2006 г.
+    </p>
+
+    <footer>
+      &copy; 2025 SCANMASTER. Все права защищены.
+    </footer>
+  </div>
+
+  <div id="header-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/partials/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        import("/js/headerBuy.js");
+        const script = document.createElement('script');
+        script.src = '/js/burger.js';
+        document.body.appendChild(script);
+      });
+  
+    fetch('/partials/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+  
+</body>
+</html>
