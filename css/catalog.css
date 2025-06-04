@@ -22,10 +22,12 @@ html, body {
 
 .product-card {
   background: #111;
-  padding: 12px; 
-  border-radius: 14px; 
+  padding: 12px;
+  border-radius: 14px;
   color: white;
   border: 1px solid #333;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -287,6 +289,10 @@ html, body {
   margin-bottom: 40px;
 }
 
+.filter-toggle {
+  display: none;
+}
+
 .catalog-content {
   flex: 1;
   display: flex;
@@ -353,5 +359,52 @@ html, body {
 }
 .quantity-controls .quantity-input[type="number"] {
   -moz-appearance: textfield;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .catalog-wrapper {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+  
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    z-index: 10000;
+    overflow-y: auto;
+  }
+  .filters.open {
+    transform: translateX(0);
+  }
+  .filter-toggle {
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    z-index: 10050;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: #F96000;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+  }
 }
 
