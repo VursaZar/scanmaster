@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Статьи | SCANMASTER</title>
-  <link rel="stylesheet" href="/scanmaster/Articles/articles.css">
-  <link rel="stylesheet" href="/scanmaster/main/headerfoter.css">
+  <link rel="stylesheet" href="/scanmaster/css/styles-blog.css">
+  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
 </head>
 
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/scanmaster/main/headerfoter/header.html')
+    fetch('/scanmaster/partials/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
@@ -22,8 +22,8 @@
     <h2>📰 Статьи</h2>
     <div class="articles-grid">
       <!-- Статья 1 -->
-      <a href="/scanmaster/article/1.html" class="article-card">
-        <div class="article-thumb" style="background-image: url('/scanmaster/articles/thumbs/article1.jpg');"></div>
+      <a href="/scanmaster/blog/blog.html" class="article-card">
+        <div class="article-thumb" style="background-image: url('/scanmaster/assets/img/placeholder.jpg');"></div>
         <div class="article-content">
           <div class="article-author">
             <img src="/scanmaster/main/img/logoP.svg" alt="Автор">
@@ -35,8 +35,8 @@
       </a>
 
       <!-- Статья 2 -->
-      <a href="/scanmaster/article/2.html" class="article-card">
-        <div class="article-thumb" style="background-image: url('/scanmaster/articles/thumbs/article2.jpg');"></div>
+      <a href="/scanmaster/blog/blog.html" class="article-card">
+        <div class="article-thumb" style="background-image: url('/scanmaster/assets/img/placeholder.jpg');"></div>
         <div class="article-content">
           <div class="article-author">
             <img src="/scanmaster/main/img/logoP.svg" alt="Автор">
