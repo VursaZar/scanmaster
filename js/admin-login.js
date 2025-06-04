@@ -60,7 +60,7 @@ import {
   
         const adminData = adminDoc.data();
         alert(`✅ Добро пожаловать, ${adminData.name || "админ"}!`);
-        window.location.href = "/scanmaster/Admins/admin-panel.html";
+        window.location.href = "/scanmaster/admins/admin-panel.html";
   
       } catch (error) {
         console.error("❌ Ошибка входа:", error);

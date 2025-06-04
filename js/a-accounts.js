@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(getAuth(), (user) => {
     if (!user) {
       alert("⛔ Не авторизован");
-      location.href = "/scanmaster/main/admin-login.html";
+      location.href = "/scanmaster/admins/admin-login.html";
       return;
     }
     loadAdminData();
