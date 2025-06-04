@@ -34,7 +34,7 @@
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         console.warn("⛔ Не авторизован. Перенаправляю...");
-        window.location.href = "/scanmaster/main/admin-login.html";
+        window.location.href = "/scanmaster/admins/admin-login.html";
       } else {
         console.log("✅ Авторизован как:", user.email || user.uid);
       }
