@@ -367,10 +367,12 @@ html, body {
     flex-direction: column;
     padding: 0 16px;
   }
+  
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+  
   .filters {
     position: fixed;
     top: 0;
