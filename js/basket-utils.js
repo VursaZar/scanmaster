@@ -1,4 +1,4 @@
-// /js/basket-utils.js
+// /scanmaster/js/basket-utils.js
 
 export function addToBasket(product) {
     const basket = JSON.parse(localStorage.getItem("basket")) || [];
@@ -30,9 +30,9 @@ export function addToBasket(product) {
     if (basket.length === 0) return;
   
     const link = document.createElement("a");
-    link.href = "/main/basket.html";
+    link.href = "/scanmaster/main/basket.html";
     link.className = "cart-icon";
-    link.innerHTML = `<img src="/assets/img/BuyT.svg" alt="Корзина" style="width: 26px; height: 26px;">`;
+    link.innerHTML = `<img src="/scanmaster/assets/img/BuyT.svg" alt="Корзина" style="width: 26px; height: 26px;">`;
     nav.prepend(link);
   }
 

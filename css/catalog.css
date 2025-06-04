@@ -202,17 +202,17 @@ html, body {
 /* Цвета + иконки */
 .mp-btn.wb {
   background-color: #A100FF;
-  background-image: url('/assets/icons/wb.svg');
+  background-image: url('/scanmaster/assets/icons/wb.svg');
 }
 
 .mp-btn.ozon {
   background-color: #007BFF;
-  background-image: url('/assets/icons/ozon.svg');
+  background-image: url('/scanmaster/assets/icons/ozon.svg');
 }
 
 .mp-btn.ym {
   background-color: #FFCC00;
-  background-image: url('/assets/icons/yamarket.svg');
+  background-image: url('/scanmaster/assets/icons/yamarket.svg');
 }
 
 .feature-remove {
