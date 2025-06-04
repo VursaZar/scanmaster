@@ -6,21 +6,21 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/headerfoter.css">
-  <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
+  <link rel="stylesheet" href="/scanmaster/css/products.css">
 </head>
 <body>
   <div id="header-placeholder"></div>
 
   <main class="product-page">
     <div class="gallery-wrapper">
-      <img class="main-image" id="mainImage" src="/products/sor1/1.jpg" alt="SCANMASTER SOR1">
+      <img class="main-image" id="mainImage" src="/scanmaster/products/sor1/1.jpg" alt="SCANMASTER SOR1">
       <div class="gallery">
-        <img src="/products/sor1/1.jpg" class="active" onclick="switchImage(this)">
-        <img src="/products/sor1/2.jpg" onclick="switchImage(this)">
-        <img src="/products/sor1/3.jpg" onclick="switchImage(this)">
-        <img src="/products/sor1/4.jpg" onclick="switchImage(this)">
-        <img src="/products/sor1/5.jpg" onclick="switchImage(this)">
+        <img src="/scanmaster/products/sor1/1.jpg" class="active" onclick="switchImage(this)">
+        <img src="/scanmaster/products/sor1/2.jpg" onclick="switchImage(this)">
+        <img src="/scanmaster/products/sor1/3.jpg" onclick="switchImage(this)">
+        <img src="/scanmaster/products/sor1/4.jpg" onclick="switchImage(this)">
+        <img src="/scanmaster/products/sor1/5.jpg" onclick="switchImage(this)">
       </div>
     </div>
 
@@ -48,8 +48,8 @@
       </table>
 
       <div class="downloads">
-        <a href="/docs/SOR1_driver.pdf" download>📥 Драйвер</a>
-        <a href="/docs/SOR1_manual.pdf" download>📘 Инструкция</a>
+        <a href="/scanmaster/docs/SOR1_driver.pdf" download>📥 Драйвер</a>
+        <a href="/scanmaster/docs/SOR1_manual.pdf" download>📘 Инструкция</a>
       </div>
     </div>
   </main>
@@ -59,8 +59,8 @@
       <div class="footer-logo-text">SCANMASTER</div>
       <div class="footer-bottom">
         <p>© SCANMASTER 2025</p>
-        <a href="/main/privacy.html">Политика конфиденциальности</a>
-        <a href="/Articles/articles.html">Наши статьи</a>
+        <a href="/scanmaster/main/privacy.html">Политика конфиденциальности</a>
+        <a href="/scanmaster/Articles/articles.html">Наши статьи</a>
       </div>
     </div>
   </footer>
@@ -72,7 +72,7 @@
       document.getElementById('mainImage').src = img.src;
     }
 
-    fetch('/partials/header.html')
+    fetch('/scanmaster/partials/header.html')
       .then(res => res.text())
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>

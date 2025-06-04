@@ -2,23 +2,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
   <title>Настройки администратора — SCANMASTER</title>
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/admin.css">
-  <link rel="stylesheet" href="/css/a-accounts.css">
-  <link rel="stylesheet" href="/css/headerfoter.css">
-  <script type="module" src="/js/check-admin-access.js"></script>
-  <script type="module" src="/js/a-accounts.js"></script>
+  <link rel="stylesheet" href="/scanmaster/css/admin.css">
+  <link rel="stylesheet" href="/scanmaster/css/a-accounts.css">
+  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
+  <script type="module" src="/scanmaster/js/check-admin-access.js"></script>
+  <script type="module" src="/scanmaster/js/a-accounts.js"></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/partials/admin-header.html')
+    fetch('/scanmaster/partials/admin-header.html')
       .then(res => res.text())
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>
-  <script type="module" src="/js/logout-handler.js"></script>
+  <script type="module" src="/scanmaster/js/logout-handler.js"></script>
 
   <main class="account-settings-container">
     <h2>Настройки администратора</h2>

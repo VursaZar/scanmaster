@@ -2,16 +2,16 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SCANMASTER — Главная</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/buy-page.css">
-  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/scanmaster/css/main.css">
+  <link rel="stylesheet" href="/scanmaster/css/buy-page.css">
+  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
 </head>
 <body>
 <section class="hero">
@@ -39,7 +39,7 @@
 
   <!-- Принтер -->
   <div class="hero-right">
-    <img src="/assets/img/Принтер.png" alt="SCANMASTER Printer">
+    <img src="/scanmaster/assets/img/Принтер.png" alt="SCANMASTER Printer">
   
     <div class="play-button">
       <svg width="90" height="90" viewBox="0 0 181 181" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,17 +55,17 @@
   <section class="advantages">
     <div class="advantages-container">
       <div class="advantage">
-        <img src="/main/img/Бирка.png" alt="Оптовые цены" class="advantage-icon">
+        <img src="/scanmaster/main/img/Бирка.png" alt="Оптовые цены" class="advantage-icon">
         <h3>ОПТОВЫЕ<br>ЦЕНЫ</h3>
         <p>Большой выбор<br>по выгодным ценам</p>
       </div>
       <div class="advantage">
-        <img src="/main/img/Машинка.png" alt="Быстрая доставка" class="advantage-icon">
+        <img src="/scanmaster/main/img/Машинка.png" alt="Быстрая доставка" class="advantage-icon">
         <h3>БЫСТРАЯ<br>ДОСТАВКА</h3>
         <p>Доставим в любой регион<br>за 2–3 дня</p>
       </div>
       <div class="advantage">
-        <img src="/main/img/Наушники.png" alt="Поддержка 24/7" class="advantage-icon">
+        <img src="/scanmaster/main/img/Наушники.png" alt="Поддержка 24/7" class="advantage-icon">
         <h3>ПОДДЕРЖКА<br>24/7</h3>
         <p>Отвечаем на все<br>вопросы и помогаем</p>
       </div>
@@ -154,25 +154,25 @@
   <div id="footer-placeholder"></div>
 
 <script>
-  fetch('/partials/header.html')
+  fetch('/scanmaster/partials/header.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
       
       // ⬇️ Подключаем только после вставки в DOM
       const script = document.createElement('script');
-      script.src = '/js/burger.js';
+      script.src = '/scanmaster/js/burger.js';
       document.body.appendChild(script);
     });
 
-  fetch('/partials/footer.html')
+  fetch('/scanmaster/partials/footer.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
     });
 </script>
   
-  <script src="/main/main.js"></script>
+  <script src="/scanmaster/main/main.js"></script>
 </body>
 </html>
 

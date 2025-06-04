@@ -5,8 +5,8 @@ import {
     getDocs
   } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
   
-  import { db } from "./firebase-init.js";
-  import { addToBasket, getBasketQuantity, setBasketQuantity } from "./basket-utils.js";
+  import { db } from "/scanmaster/js/firebase-init.js";
+  import { addToBasket, getBasketQuantity, setBasketQuantity } from "/scanmaster/js/basket-utils.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const catalogContainer = document.getElementById("productGrid");
@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `}
       </div>
       <div class="marketplace-buttons">
-        ${towb ? `<a href="${towb}" target="_blank" class="mp-btn wb"><img src="/assets/img/BuyT.svg" alt="wb" /></a>` : ""}
-        ${tooz ? `<a href="${tooz}" target="_blank" class="mp-btn ozon"><img src="/assets/img/BuyT.svg" alt="ozon" /></a>` : ""}
-        ${toym ? `<a href="${toym}" target="_blank" class="mp-btn ym"><img src="/assets/img/BuyT.svg" alt="ym" /></a>` : ""}
+        ${towb ? `<a href="${towb}" target="_blank" class="mp-btn wb"><img src="/scanmaster/assets/img/BuyT.svg" alt="wb" /></a>` : ""}
+        ${tooz ? `<a href="${tooz}" target="_blank" class="mp-btn ozon"><img src="/scanmaster/assets/img/BuyT.svg" alt="ozon" /></a>` : ""}
+        ${toym ? `<a href="${toym}" target="_blank" class="mp-btn ym"><img src="/scanmaster/assets/img/BuyT.svg" alt="ym" /></a>` : ""}
       </div>
     `;
     attachBuyHandlers(card, product);
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let imageSrc = Array.isArray(images) && images.length > 0
       ? images[0]
-      : "/assets/img/placeholder.jpg";
+      : "/scanmaster/assets/img/placeholder.jpg";
 
     const match = imageSrc.match(/\/d\/([a-zA-Z0-9_-]+)\//);
     if (match) {
@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Проверяем, есть ли товар в корзине
     const quantity = getBasketQuantity(slug);
 
-    console.log('Генерирую карточку:', name, 'slug:', slug, 'href:', `/products/product.html?slug=${slug}`);
+    console.log('Генерирую карточку:', name, 'slug:', slug, 'href:', `/scanmaster/products/product.html?slug=${slug}`);
     card.innerHTML = `
-  <a class="product-link" href="/products/product.html?slug=${slug}" style="cursor:pointer">
+  <a class="product-link" href="/scanmaster/products/product.html?slug=${slug}" style="cursor:pointer">
     <div class="image-container">
       <img src="${imageSrc}" alt="${name}" 
-        onerror="this.onerror=null; this.src='/assets/img/placeholder.jpg';" />
+        onerror="this.onerror=null; this.src='/scanmaster/assets/img/placeholder.jpg';" />
     </div>
     <div class="product-info">
       <h3>${name}</h3>
