@@ -22,10 +22,12 @@ html, body {
 
 .product-card {
   background: #111;
-  padding: 12px; 
-  border-radius: 14px; 
+  padding: 12px;
+  border-radius: 14px;
   color: white;
   border: 1px solid #333;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -365,9 +367,12 @@ html, body {
     flex-direction: column;
     padding: 0 16px;
   }
+  
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
+  
   .filters {
     position: fixed;
     top: 0;
