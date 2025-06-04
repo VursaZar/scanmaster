@@ -366,13 +366,16 @@ html, body {
   .catalog-wrapper {
     flex-direction: column;
     padding: 0 16px;
+    position: relative;
   }
   
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
+
   .filters {
     position: fixed;
     top: 0;
@@ -386,9 +389,11 @@ html, body {
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
     z-index: 10000;
     overflow-y: auto;
+    pointer-events: none;
   }
   .filters.open {
     transform: translateX(0);
+    pointer-events: auto;
   }
   .filter-toggle {
     display: flex;
