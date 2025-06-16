@@ -2,25 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог — SCANMASTER</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/scanmaster/css/main.css">
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
-  <link rel="stylesheet" href="/scanmaster/css/catalog.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/catalog.css">
 
   <!-- Firebase init -->
-  <script type="module" src="/scanmaster/js/firebase-init.js"></script>
+  <script type="module" src="/js/firebase-init.js"></script>
   <!-- Catalog логика -->
-  <script type="module" src="/scanmaster/js/catalog.js"></script>
+  <script type="module" src="/js/catalog.js"></script>
 </head>
 <body>
 
-  <button id="filterToggle" class="filter-toggle" aria-label="Фильтры">☰</button>
   <div class="catalog-wrapper">
+    <button class="filter-toggle" aria-label="Показать фильтры"></button>
     <aside class="filters">
       <input type="text" id="searchInput" placeholder="Поиск по названию" />
     
@@ -53,23 +53,22 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    fetch('/scanmaster/partials/header.html')
+    fetch('/partials/header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-        import("/scanmaster/js/headerBuy.js");
+        import("/js/headerBuy.js");
         const script = document.createElement('script');
-        script.src = '/scanmaster/js/burger.js';
+        script.src = '/js/burger.js';
         document.body.appendChild(script);
       });
   
-    fetch('/scanmaster/partials/footer.html')
+    fetch('/partials/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
   </script>
-  <script src="/scanmaster/js/filter-toggle.js"></script>
-
+  
 </body>
 </html>

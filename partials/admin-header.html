@@ -1,31 +1,31 @@
 <header class="header">
-    <a href="/scanmaster/admins/admin-panel.html" class="logo">
-      <img src="/scanmaster/assets/img/logoMTO.svg" alt="SCANMASTER" />
+    <a href="/admins/admin-panel.html" class="logo">
+      <img src="/assets/img/logoMTO.svg" alt="SCANMASTER" />
       <span>Админ-панель</span>
     </a>
 
     <nav class="nav">
-      <a href="/scanmaster/admins/a-catalog.html">Ред. каталог</a>
-      <a href="/scanmaster/admins/a-orders.html">Заявки</a>
-      <a href="/scanmaster/admins/a-accounts.html">Ред. аккаунты</a>
-      <a href="/scanmaster/admins/a-blog.html">Ред. блог</a>
+      <a href="/admins/a-catalog.html">Ред. каталог</a>
+      <a href="/admins/a-orders.html">Заявки</a>
+      <a href="/admins/a-accounts.html">Ред. аккаунты</a>
+      <a href="/admins/a-blog.html">Ред. блог</a>
       <a href="#" id="logout-link">Выйти</a>
     </nav>
     <button class="burger" id="burger-btn" aria-label="Открыть меню">
       <span></span><span></span><span></span>
     </button>
     <div class="mobile-nav" id="mobileNav">
-      <a href="/scanmaster/admins/a-catalog.html">Ред. каталог</a>
-      <a href="/scanmaster/admins/a-orders.html">Заявки</a>
-      <a href="/scanmaster/admins/a-accounts.html">Ред. аккаунты</a>
-      <a href="/scanmaster/admins/a-blog.html">Ред. блог</a>
+      <a href="/admins/a-catalog.html">Ред. каталог</a>
+      <a href="/admins/a-orders.html">Заявки</a>
+      <a href="/admins/a-accounts.html">Ред. аккаунты</a>
+      <a href="/admins/a-blog.html">Ред. блог</a>
       <a href="#" id="logout-link-mobile">Выйти</a>
     </div>
 </header>
   
 <script type="module">
   import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-  import { app } from "/scanmaster/js/firebase-init.js";
+  import { app } from "/js/firebase-init.js";
 
   document.addEventListener("DOMContentLoaded", () => {
     const auth = getAuth(app);
@@ -34,7 +34,7 @@
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         console.warn("⛔ Не авторизован. Перенаправляю...");
-        window.location.href = "/scanmaster/admins/admin-login.html";
+        window.location.href = "/main/admin-login.html";
       } else {
         console.log("✅ Авторизован как:", user.email || user.uid);
       }
@@ -58,7 +58,7 @@
         console.log("✅ Успешный выход");
 
         alert("Вы вышли из аккаунта.");
-        window.location.href = "/scanmaster/main/main.html";
+        window.location.href = "/main/main.html";
       } catch (error) {
         console.error("❌ Ошибка при выходе:", error);
         alert("Ошибка при выходе. Открой консоль, чтобы увидеть причину.");

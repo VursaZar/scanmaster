@@ -328,6 +328,15 @@ section {
   letter-spacing: 0.5px;
 }
 
+.buy-heading {
+  font-size: 64px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
+  color: white;
+  font-family: 'Days One', sans-serif;
+}
+
 @media (max-width: 1100px) {
   .benefits-cards {
     gap: 18px;
@@ -511,4 +520,70 @@ section {
   }
   .hero-svg-bg { display: none; }
   .play-button { display: none; }
+  
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    height: auto;
+    display: block;
+  }
+
+  .buy-page {
+    padding: 64px 16px 32px;
+    background: #000;
+  }
+
+  .buy-heading {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 32px;
+    color: white;
+  }
+
+  .buy-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .buy-card {
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+  }
+
+  .buy-card.wildberries {
+    background: #a960e1;
+    width: calc(50% - 8px);
+  }
+
+  .buy-card.ozon {
+    background: #5297ff;
+    width: calc(50% - 8px);
+  }
+
+  .buy-card.yandex {
+    background: #ffe066;
+    color: black;
+    width: 100%;
+  }
+
+  .buy-card h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .buy-card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }

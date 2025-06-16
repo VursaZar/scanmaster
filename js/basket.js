@@ -1,4 +1,4 @@
-import { db } from '/scanmaster/js/firebase-init.js';
+import { db } from '/js/firebase-init.js';
 import { collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <button class="decrease">−</button>
           <input type="number" class="quantity-input" min="1" value="${item.quantity}" data-slug="${item.slug}" />
           <button class="increase">+</button>
-          <button class="delete-btn" title="Удалить"><img src="/scanmaster/assets/img/Del.svg" alt="Удалить"></button>
+          <button class="delete-btn" title="Удалить"><img src="/assets/img/Del.svg" alt="Удалить"></button>
         </div>
       `;
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       localStorage.removeItem('basket');
       alert('✅ Заказ отправлен!');
-      window.location.href = "/scanmaster/main/catalog.html";
+      window.location.href = "/main/catalog.html";
     } catch (err) {
       console.error('❌ Ошибка при оформлении заказа:', err);
       alert('Ошибка при отправке. Попробуйте ещё раз.');

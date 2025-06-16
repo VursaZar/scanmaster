@@ -10,7 +10,7 @@ import {
     getDoc
   } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
   
-  import { app } from "/scanmaster/js/firebase-init.js"; 
+  import { app } from "./firebase-init.js"; 
 
   const auth = getAuth(app);
   const db = getFirestore(app);
@@ -60,7 +60,7 @@ import {
   
         const adminData = adminDoc.data();
         alert(`✅ Добро пожаловать, ${adminData.name || "админ"}!`);
-        window.location.href = "/scanmaster/admins/admin-panel.html";
+        window.location.href = "/Admins/admin-panel.html";
   
       } catch (error) {
         console.error("❌ Ошибка входа:", error);

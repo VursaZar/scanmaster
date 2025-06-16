@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Заявки — SCANMASTER Admin</title>
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
-  <link rel="stylesheet" href="/scanmaster/css/catalog.css">
-  <link rel="stylesheet" href="/scanmaster/css/basket.css">
-  <link rel="stylesheet" href="/scanmaster/css/a-orders.css">
-  <script type="module" src="/scanmaster/js/admin-login.js"></script>
-  <script type="module" src="/scanmaster/js/firebase-init.js"></script>
-  <script type="module" src="/scanmaster/js/a-orders.js"></script>
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/catalog.css">
+  <link rel="stylesheet" href="/css/basket.css">
+  <link rel="stylesheet" href="/css/a-orders.css">
+  <script type="module" src="/js/admin-login.js"></script>
+  <script type="module" src="/js/firebase-init.js"></script>
+  <script type="module" src="/js/a-orders.js"></script>
 </head>
 <body>
   <main class="orders-admin">
@@ -23,7 +23,7 @@
   </main>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/scanmaster/partials/admin-header.html')
+    fetch('/partials/admin-header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;

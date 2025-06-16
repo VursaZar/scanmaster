@@ -1,5 +1,5 @@
 import { getDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
-import { db } from "/scanmaster/js/firebase-init.js";
+import { db } from "/js/firebase-init.js";
 import {
   getAuth,
   onAuthStateChanged,
@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(getAuth(), (user) => {
     if (!user) {
       alert("⛔ Не авторизован");
-      location.href = "/scanmaster/admins/admin-login.html";
+      location.href = "/main/admin-login.html";
       return;
     }
     loadAdminData();

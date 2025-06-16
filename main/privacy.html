@@ -2,10 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Политика конфиденциальности — SCANMASTER</title>
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/headerfoter.css">
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
@@ -125,17 +125,17 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    fetch('/scanmaster/partials/header.html')
+    fetch('/partials/header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-        import("/scanmaster/js/headerBuy.js");
+        import("/js/headerBuy.js");
         const script = document.createElement('script');
-        script.src = '/scanmaster/js/burger.js';
+        script.src = '/js/burger.js';
         document.body.appendChild(script);
       });
   
-    fetch('/scanmaster/partials/footer.html')
+    fetch('/partials/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;

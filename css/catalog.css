@@ -22,12 +22,10 @@ html, body {
 
 .product-card {
   background: #111;
-  padding: 12px;
-  border-radius: 14px;
+  padding: 12px; 
+  border-radius: 14px; 
   color: white;
   border: 1px solid #333;
-  width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -204,17 +202,14 @@ html, body {
 /* Цвета + иконки */
 .mp-btn.wb {
   background-color: #A100FF;
-  background-image: url('/scanmaster/assets/icons/wb.svg');
 }
 
 .mp-btn.ozon {
   background-color: #007BFF;
-  background-image: url('/scanmaster/assets/icons/ozon.svg');
 }
 
 .mp-btn.ym {
   background-color: #FFCC00;
-  background-image: url('/scanmaster/assets/icons/yamarket.svg');
 }
 
 .feature-remove {
@@ -289,10 +284,6 @@ html, body {
   margin-bottom: 40px;
 }
 
-.filter-toggle {
-  display: none;
-}
-
 .catalog-content {
   flex: 1;
   display: flex;
@@ -357,23 +348,60 @@ html, body {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .quantity-controls .quantity-input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
+/* ========== Кнопка-стрелка для фильтров ========== */
+/* Общие: кнопка-стрелка фильтров, скрыта на десктопе */
+.filter-toggle {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 10050;
+  width: 32px;
+  height: 64px;
+  padding: 0;
+  background: #F96000;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+.filter-toggle::before {
+  content: '››';
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  text-align: center;
+  display: block;
+}
+
+.buy-controls .buy-btn,
+.buy-button {
+  display: inline-block;       /* текст не вылезает за границы */
+  width: auto;                 /* не тянем на всю ширину */
+  padding: 10px 20px;          /* горизонтальные паддинги для текста */
+  font-size: 18px;             /* чуть меньше на мобилке */
+  line-height: 1.2;            /* чтобы было ровно по центру */
+  white-space: nowrap;         /* запрещаем перенос слов */
+  border-radius: 10px;         /* скругление совпадает с дизайном */
+  text-align: center;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .catalog-wrapper {
-    flex-direction: column;
-    padding: 0 16px;
+  /* Показываем кнопку-стрелку */
+  .filter-toggle {
+    display: block;
   }
-  
-  .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  
+  /* Скрываем/выезжаем панель фильтров */
   .filters {
+    display: none !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -388,23 +416,78 @@ html, body {
     overflow-y: auto;
   }
   .filters.open {
-    transform: translateX(0);
+    display: flex !important;
+    transform: translateX(0) !important;
   }
-  .filter-toggle {
-    display: flex;
-    position: fixed;
-    top: 80px;
-    left: 10px;
-    z-index: 10050;
-    width: 40px;
+
+  /* Flex-раскладка карточек по 2 в ряд */
+  .catalog-wrapper {
+    display: block;
+    padding: 0 12px;
+    gap: 0;
+  }
+  .catalog-grid {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    width: 100%;
+  }
+  .catalog-grid > .product-card {
+    flex: 0 0 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+    min-width: 0;
+  }
+
+  /* Кнопка "Купить" */
+  .buy-controls .buy-btn,
+  .buy-button {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    white-space: nowrap;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .mp-btn {
+    margin: 0;   
+    flex: 0 0 40px;
     height: 40px;
+    border-radius: 8px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background: #F96000;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
+    padding: 0;
   }
+  .mp-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .buy-section {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Снова показываем кнопки маркетплейсов и прижимаем их под "Купить" */
+  .marketplace-buttons {
+    display: flex !important;
+    margin-top: 0;          /* уже контролируется gap у buy-section */
+    justify-content: flex-start;
+  }
+
 }
 
+/* Ещё чуть уменьшим "Купить" на самых узких */
+@media (max-width: 480px) {
+  .buy-controls .buy-btn,
+  .buy-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
