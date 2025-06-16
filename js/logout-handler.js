@@ -1,5 +1,5 @@
 import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-import { app } from "/js/firebase-init.js";
+import { app } from "/scanmaster/js/firebase-init.js";
 
 // Подожди появления logout-кнопки
 const waitForLogoutLink = setInterval(() => {
@@ -20,7 +20,7 @@ const waitForLogoutLink = setInterval(() => {
         console.log("✅ Успешный выход");
 
         alert("Вы вышли из аккаунта.");
-        window.location.href = "/main/main.html";
+        window.location.href = "/scanmaster/main/main.html";
       } catch (error) {
         console.error("❌ Ошибка при выходе:", error);
         alert("Ошибка при выходе. Открой консоль, чтобы увидеть причину.");
