@@ -1,4 +1,4 @@
-import { db } from "/js/firebase-init.js";
+import { db } from "/scanmaster/js/firebase-init.js";
 import { collection, getDocs, updateDoc, doc, query, orderBy } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {

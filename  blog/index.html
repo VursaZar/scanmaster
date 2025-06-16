@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Статьи | SCANMASTER</title>
-  <link rel="stylesheet" href="/Articles/articles.css">
-  <link rel="stylesheet" href="/main/headerfoter.css">
+  <link rel="stylesheet" href="/scanmaster/Articles/articles.css">
+  <link rel="stylesheet" href="/scanmaster/main/headerfoter.css">
 </head>
 
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/main/headerfoter/header.html')
+    fetch('/scanmaster/main/headerfoter/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
@@ -22,11 +22,11 @@
     <h2>📰 Статьи</h2>
     <div class="articles-grid">
       <!-- Статья 1 -->
-      <a href="/article/1.html" class="article-card">
-        <div class="article-thumb" style="background-image: url('/articles/thumbs/article1.jpg');"></div>
+      <a href="/scanmaster/article/1.html" class="article-card">
+        <div class="article-thumb" style="background-image: url('/scanmaster/articles/thumbs/article1.jpg');"></div>
         <div class="article-content">
           <div class="article-author">
-            <img src="/main/img/logoP.svg" alt="Автор">
+            <img src="/scanmaster/main/img/logoP.svg" alt="Автор">
             <span>SCANMASTER / <a href="https://t.me/scanmaster_tm" target="_blank">@scanmaster</a></span>
           </div>
           <h3>Как выбрать термопринтер для маркетплейсов</h3>
@@ -35,11 +35,11 @@
       </a>
 
       <!-- Статья 2 -->
-      <a href="/article/2.html" class="article-card">
-        <div class="article-thumb" style="background-image: url('/articles/thumbs/article2.jpg');"></div>
+      <a href="/scanmaster/article/2.html" class="article-card">
+        <div class="article-thumb" style="background-image: url('/scanmaster/articles/thumbs/article2.jpg');"></div>
         <div class="article-content">
           <div class="article-author">
-            <img src="/main/img/logoP.svg" alt="Автор">
+            <img src="/scanmaster/main/img/logoP.svg" alt="Автор">
             <span>SCANMASTER / <a href="https://t.me/scanmaster_tm" target="_blank">@scanmaster</a></span>
           </div>
           <h3>Сканер штрихкодов: всё, что нужно знать</h3>
@@ -55,7 +55,7 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    fetch('/partials/footer.html')
+    fetch('/scanmaster/partials/footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;

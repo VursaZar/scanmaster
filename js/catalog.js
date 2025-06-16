@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `}
       </div>
       <div class="marketplace-buttons">
-        ${towb ? `<a href="${towb}" target="_blank" class="mp-btn wb"><img src="/assets/img/BuyT.svg" alt="wb" /></a>` : ""}
-        ${tooz ? `<a href="${tooz}" target="_blank" class="mp-btn ozon"><img src="/assets/img/BuyT.svg" alt="ozon" /></a>` : ""}
-        ${toym ? `<a href="${toym}" target="_blank" class="mp-btn ym"><img src="/assets/img/BuyT.svg" alt="ym" /></a>` : ""}
+        ${towb ? `<a href="${towb}" target="_blank" class="mp-btn wb"><img src="/scanmaster/assets/img/BuyT.svg" alt="wb" /></a>` : ""}
+        ${tooz ? `<a href="${tooz}" target="_blank" class="mp-btn ozon"><img src="/scanmaster/assets/img/BuyT.svg" alt="ozon" /></a>` : ""}
+        ${toym ? `<a href="${toym}" target="_blank" class="mp-btn ym"><img src="/scanmaster/assets/img/BuyT.svg" alt="ym" /></a>` : ""}
       </div>
     `;
     attachBuyHandlers(card, product);
@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('Генерирую карточку:', name, 'slug:', slug, 'href:', `/products/product.html?slug=${slug}`);
     card.innerHTML = `
-  <a class="product-link" href="/products/product.html?slug=${slug}" style="cursor:pointer">
+  <a class="product-link" href="/scanmaster/products/product.html?slug=${slug}" style="cursor:pointer">
     <div class="image-container">
       <img src="${imageSrc}" alt="${name}" 
-        onerror="this.onerror=null; this.src='/assets/img/placeholder.jpg';" />
+        onerror="this.onerror=null; this.src='/scanmaster/assets/img/placeholder.jpg';" />
     </div>
     <div class="product-info">
       <h3>${name}</h3>

@@ -2,24 +2,24 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вход в Админ-панель — SCANMASTER</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/admin.css">
-  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/scanmaster/css/admin.css">
+  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
 
   <!-- Подключаем только init -->
-  <script type="module" src="/js/firebase-init.js"></script>
-  <script type="module" src="/js/admin-login.js"></script>
+  <script type="module" src="/scanmaster/js/firebase-init.js"></script>
+  <script type="module" src="/scanmaster/js/admin-login.js"></script>
 </head>
 
 <body>
   <div id="header-placeholder"></div>
   <script>
-    fetch('/partials/header.html')
+    fetch('/scanmaster/partials/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;

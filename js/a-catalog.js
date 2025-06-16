@@ -7,7 +7,7 @@ import {
     doc
   } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
   
-  import { db } from "/js/firebase-init.js";
+  import { db } from "/scanmaster/js/firebase-init.js";
   
   document.addEventListener("DOMContentLoaded", () => {
     const catalogContainer = document.getElementById("productGrid");
@@ -114,7 +114,7 @@ import {
       <a href="#" class="product-link" tabindex="-1" style="pointer-events:none">
         <div class="image-container">
           <img src="${imageSrc}" alt="${name}" 
-            onerror="this.onerror=null; this.src='/assets/img/placeholder.jpg';" />
+            onerror="this.onerror=null; this.src='/scanmaster/assets/img/placeholder.jpg';" />
         </div>
         <div class="product-info">
           <h3>${name}</h3>
