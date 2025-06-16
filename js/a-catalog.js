@@ -7,7 +7,7 @@ import {
     doc
   } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
   
-  import { db } from "/scanmaster/js/firebase-init.js";
+  import { db } from "/js/firebase-init.js";
   
   document.addEventListener("DOMContentLoaded", () => {
     const catalogContainer = document.getElementById("productGrid");
@@ -98,7 +98,7 @@ import {
   
     let imageSrc = Array.isArray(images) && images.length > 0
     ? images[0]
-    : "/scanmaster/assets/img/placeholder.jpg";
+    : "/assets/img/placeholder.jpg";
 
     // Автоконвертация Google Drive
     const match = imageSrc.match(/\/d\/([a-zA-Z0-9_-]+)\//);
@@ -114,7 +114,7 @@ import {
       <a href="#" class="product-link" tabindex="-1" style="pointer-events:none">
         <div class="image-container">
           <img src="${imageSrc}" alt="${name}" 
-            onerror="this.onerror=null; this.src='/scanmaster/assets/img/placeholder.jpg';" />
+            onerror="this.onerror=null; this.src='/assets/img/placeholder.jpg';" />
         </div>
         <div class="product-info">
           <h3>${name}</h3>
@@ -134,7 +134,7 @@ import {
     // Обработчик клика по карточке (кроме иконок)
     card.addEventListener("click", (e) => {
       if (e.target.closest('.edit-icon, .delete-icon')) return;
-      window.location.href = `/scanmaster/products/product.html?slug=${slug}`;
+      window.location.href = `/products/product.html?slug=${slug}`;
     });
   
     // 🔧 Добавляем только если это не "add-card"

@@ -2,13 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Политика конфиденциальности — SCANMASTER</title>
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/headerfoter.css">
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <script type="module" src="/scanmaster/js/check-admin-access.js"></script>
+  <script type="module" src="/js/check-admin-access.js"></script>
   <style>
     body {
       margin: 0;
@@ -61,7 +61,7 @@
   <div id="header-placeholder"></div>
   <script>
     // ❗ Подгрузка хедера — только в самом конце
-    fetch('/scanmaster/partials/admin-header.html')
+    fetch('/partials/admin-header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;

@@ -1,14 +1,14 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Корзина | SCANMASTER</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
-  <link rel="stylesheet" href="/scanmaster/css/basket.css">
-  <script type="module" src="/scanmaster/js/firebase-init.js"></script>
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/basket.css">
+  <script type="module" src="/js/firebase-init.js"></script>
 </head>
 <body>
   <main class="basket-container">
@@ -38,22 +38,22 @@
   <div id="header-placeholder"></div>
 
   <script>
-    fetch('/scanmaster/partials/header.html')
+    fetch('/partials/header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
-        import("/scanmaster/js/headerBuy.js");
+        import("/js/headerBuy.js");
         const script = document.createElement('script');
-        script.src = '/scanmaster/js/burger.js';
+        script.src = '/js/burger.js';
         document.body.appendChild(script);
       });
   
-    fetch('/scanmaster/partials/footer.html')
+    fetch('/partials/footer.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
       });
   </script>
-  <script type="module" src="/scanmaster/js/basket.js"></script>
+  <script type="module" src="/js/basket.js"></script>
 </body>
 </html>

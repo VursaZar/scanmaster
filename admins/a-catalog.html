@@ -2,20 +2,20 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/scanmaster/assets/img/logoSM.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/logoSM.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог — SCANMASTER</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/scanmaster/css/headerfoter.css">
-  <link rel="stylesheet" href="/scanmaster/css/catalog.css">
-  <link rel="stylesheet" href="/scanmaster/css/admin.css">
-  <link rel="stylesheet" href="/scanmaster/css/a-pruduct.css">
+  <link rel="stylesheet" href="/css/headerfoter.css">
+  <link rel="stylesheet" href="/css/catalog.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/a-pruduct.css">
 
   <!-- Firebase init -->
-  <script type="module" src="/scanmaster/js/firebase-init.js"></script>
-  <script type="module" src="/scanmaster/js/check-admin-access.js"></script>
+  <script type="module" src="/js/firebase-init.js"></script>
+  <script type="module" src="/js/check-admin-access.js"></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
@@ -95,12 +95,12 @@
   </div>
 
   <!-- Скрипты — внизу -->
-  <script type="module" src="/scanmaster/js/a-catalog.js"></script>
-  <script type="module" src="/scanmaster/js/a-product.js"></script>
-  <script type="module" src="/scanmaster/js/logout-handler.js"></script>
+  <script type="module" src="/js/a-catalog.js"></script>
+  <script type="module" src="/js/a-product.js"></script>
+  <script type="module" src="/js/logout-handler.js"></script>
   <script>
     // ❗ Подгрузка хедера — только в самом конце
-    fetch('/scanmaster/partials/admin-header.html')
+    fetch('/partials/admin-header.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;

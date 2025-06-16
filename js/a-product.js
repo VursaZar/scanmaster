@@ -1,4 +1,4 @@
-import { db } from "/scanmaster/js/firebase-init.js";
+import { db } from "/js/firebase-init.js";
 import {
   collection,
   addDoc,
